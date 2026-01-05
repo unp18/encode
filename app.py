@@ -6,7 +6,7 @@ from ai_logic import analyze_ingredients, extract_ingredients_from_image
 # ---------------- CONFIG ----------------
 st.set_page_config(page_title="AI Food Co-Pilot", page_icon="🍏")
 
-API_KEY = "AIzaSyBH5aQV3cOsNRfZ0l6J84qCR8vXFDkgrOc"
+API_KEY = st.secrets["my_api_key"]
 
 # ---------------- UI HEADER ----------------
 st.title("🍏 AI-Native Food Co-Pilot")
@@ -110,3 +110,4 @@ if product_data:
         st.write("🔄 Adjust Context (V2 Feature)")
         if st.button("I'm an athlete"):
             st.info("Would re-run analysis focusing on performance & recovery.")
+
